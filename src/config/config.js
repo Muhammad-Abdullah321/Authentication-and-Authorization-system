@@ -5,6 +5,8 @@ dotenv.config();
 const URL = process.env.MONGO_URL;
 const JWT_SECRET = process.env.JWT_SECRET;
 
+const PORT = process.env.PORT || 3300;
+
 if (!URL) {
     throw new Error("MONGO_URL is missing in .env");
 }
@@ -29,4 +31,4 @@ const connectDB = async () => {
     }
 };
 
-export { connectDB, JWT_SECRET };
+export { connectDB, JWT_SECRET ,PORT};
